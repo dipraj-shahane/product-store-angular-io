@@ -1,14 +1,14 @@
-<h2>Products</h2>
+<h2 appHighlight defaultColor="cyan" >Products</h2>
 
 <div *ngFor="let product of products; index as productId">
 
   <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+    <a [appHighlight]="'lightgreen'" [title]="product.name + ' details'" [routerLink]="['/products', productId]">
       {{ product.name }}
     </a>
   </h3>
 
-  <p *ngIf="product.description">
+  <p *ngIf="product.description" [appHighlight]="'yellow'">
     Description: {{ product.description }}
   </p>
 
